@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HALAMAN LOGIN -->
+    <div class="login-page" id="loginPage">
+        <div class="login-box">
+            <h1>🌸 My Notes</h1>
+            <p>Catat semua ide dan ceritamu!</p>
+
+            <form id="loginForm">
+                <input type="text" id="username"
+                    placeholder="Masukkan username" required>
+
+                <input type="password" id="password"
+                    placeholder="Masukkan password" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <small>Selamat datang di My Notes App</small>
+        </div>
+    </div>
+
+    <!-- HALAMAN DASHBOARD -->
+    <div class="dashboard" id="dashboard">
+
+        <header>
+            <h1>🌸 My Notes App</h1>
+            <button id="logoutBtn" class="logout">Logout</button>
+        </header>
+
+        <section class="welcome">
+            <h2>Halo, <span id="userDisplay"></span>!</h2>
+            <p>Jangan lupa tuliskan hal penting hari ini.</p>
+        </section>
+
+        <!-- FORM CATATAN -->
+        <section class="note-form">
+            <h2 id="formTitle">Tambah Catatan</h2>
+
+            <form id="notesForm">
+                <input type="text" id="noteTitle"
+                    placeholder="Judul catatan" required>
+
+                <textarea id="noteContent"
+                    placeholder="Tuliskan catatanmu..."
+                    required></textarea>
+
+                <button type="submit" id="saveBtn">
+                    Simpan Catatan
+                </button>
+            </form>
+        </section>
+
+        <!-- DAFTAR CATATAN -->
+        <section class="notes-section">
+            <h2>Catatan Saya</h2>
+
+            <input type="text" id="searchNote"
+                placeholder="Cari catatan...">
+
+            <p class="total">
+                Total catatan: <span id="totalNotes">0</span>
+            </p>
+
+            <div id="notesList" class="notes-list"></div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
